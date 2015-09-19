@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Autofill test</title>
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+  <style>
+label {display: flex; background-color: gold;}
+body { font-size: 2em; }
+input {
+	flex: 1;
+    padding: 0.4em;
+    font-size: 3em;
+}
+p { border: thin solid black; width: 100%; }
+  </style>
+</head>
+<body>
+
+
+<form action=http://software.hixie.ch/utilities/cgi/test-tools/echo method=post autocomplete=on>
+	<p><label>Name <input type=text name=name></label>
+	<p><label>Address <input type=text name=address></label>
+	<p><label>City <input type=text name=city></label>
+	<p><label>Postcode <input type=text name=postcode></label>
+	<p><label>Phone <input type=text name=phone></label>
+	<p><label>Email <input type=text name=email></label>
+	<p><input type=submit value="Continue...">
+</form>
+
+<p><a href=https://html.spec.whatwg.org/multipage/forms.html#autofill>HTML autofill</a>
+</body>
+</html>
