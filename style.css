@@ -1,0 +1,31 @@
+body {
+display: flex; justify-content: center; margin: 3em;
+}
+
+form { flex: 1; display: flex; flex-direction: column;  }
+
+label {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0.6em;
+  border: thin dotted black;
+  padding-left: 1em;
+  font-size: 1em;
+}
+
+input {
+  padding: 0.4em;
+  margin-left: 1em;
+  font-size: 1em;
+  width: 90%;
+  box-sizing: border-box;
+  display: block;
+  flex: 1;
+}
+input[type="text"] {
+    width: 0; /* For labels not to be obfuscated . */
+
+}
+
+
