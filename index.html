@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="robots" content="noindex">
-<title>JS Bin</title>
+<title>Autofill2Vcard</title>
 <meta name=viewport content="width=device-width, initial-scale=1">
-<style id="jsbin-css">
+<style>
+body { font-family: sans-serif; }
 form { display: flex; flex-direction: column; }
 input { font-size: 2em; padding: 0.4em;
 box-sizing: border-box;  display: block;
@@ -17,7 +17,7 @@ box-sizing: border-box;  display: block;
 <form action=/vcf/ method=post autocomplete=on>
 <input required type=text name=name placeholder="Name">
 <input required type=text name=organization placeholder="Organisation">
-<input type=text name=address-line1 placeholder="Street">
+<input type=text name=street-address placeholder="Street">
 <input type=text name=address-level2 placeholder="City">
 <input type=text name=country-name placeholder="Country">
 <input type=text name=postal-code placeholder="Postal code">
@@ -27,5 +27,6 @@ box-sizing: border-box;  display: block;
 <input type=submit value="Create VCF">
 </form>
 
+<p><a href=https://github.com/kaihendry/autofill2vcard>MIT licensed source code</a></p>
 </body>
 </html>
