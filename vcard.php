@@ -9,6 +9,7 @@ if (! filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
 if (empty($_POST["organization"])) {
 	die("Missing organisation.");
 }
+$org = filter_var($_POST["organization"], FILTER_SANITIZE_STRING);
 
 $uid = date("Y-m-d") . '/' . $_SERVER["REMOTE_ADDR"];
 mkdir($uid, 0777, true);
@@ -22,12 +23,12 @@ N:${_POST["family-name"]};${_POST["given-name"]};;;
 EMAIL;INTERNET:${_POST[email]}
 TEL;WORK:${_POST[tel]}
 ADR;WORK;POSTAL:;;${_POST["street-address"]};${_POST["address-level2"]};${_POST["postal-code"]};${_POST["country-name"]}
-ORG:${_POST[organization]}
+ORG:${org}
 URL:${_POST[url]}
 END:VCARD
 EOT;
 
-$fn = $uid . "/" . basename($_POST["organization"]) . ".vcard";
+$fn = $uid . "/" . basename($org) . ".vcard";
 file_put_contents($fn, $vcard);
 
 header("Location: http://" . $_SERVER["HTTP_HOST"] . "/" . urlencode($fn));
