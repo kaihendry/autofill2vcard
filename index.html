@@ -9,13 +9,14 @@ body { font-family: sans-serif; }
 form { display: flex; flex-direction: column; }
 .row { display: flex;}
 input { font-size: 1.8em; padding: 0.3em; box-sizing: border-box;  display: block; flex: 1;}
+input:focus { background-color: #FFFFCC; }
 </style>
 </head>
 <body>
 
 <form action=/vcard.php method=post autocomplete=on>
 <div class=row>
-<input required type=text name=given-name placeholder="First">
+<input required type=text name=given-name placeholder="First" autofocus>
 <input required type=text name=family-name placeholder="Last">
 </div>
 <input required type=text name=organization placeholder="Organisation">

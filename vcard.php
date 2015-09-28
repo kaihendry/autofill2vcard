@@ -27,7 +27,7 @@ URL:${_POST[url]}
 END:VCARD
 EOT;
 
-$fn = $uid . "/" . $_POST["organization"] . ".vcard";
+$fn = $uid . "/" . basename($_POST["organization"]) . ".vcard";
 file_put_contents($fn, $vcard);
 
 header("Location: http://" . $_SERVER["HTTP_HOST"] . "/" . urlencode($fn));
