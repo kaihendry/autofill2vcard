@@ -7,15 +7,17 @@
 <style>
 body { font-family: sans-serif; }
 form { display: flex; flex-direction: column; }
-input { font-size: 2em; padding: 0.4em;
-box-sizing: border-box;  display: block;
-}
+.row { display: flex;}
+input { font-size: 1.8em; padding: 0.3em; box-sizing: border-box;  display: block; flex: 1;}
 </style>
 </head>
 <body>
 
 <form action=/vcard.php method=post autocomplete=on>
-<input required type=text name=name placeholder="Name">
+<div class=row>
+<input required type=text name=given-name placeholder="First">
+<input required type=text name=family-name placeholder="Last">
+</div>
 <input required type=text name=organization placeholder="Organisation">
 <input type=text name=street-address placeholder="Street">
 <input type=text name=address-level2 placeholder="City">
